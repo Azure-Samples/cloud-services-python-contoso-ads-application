@@ -1,0 +1,79 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ titile }}</h2>
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Title
+        </dt>
+
+        <dd>
+            {{ ad.title }}
+        </dd>
+
+        <dt>
+            Price
+        </dt>
+
+        <dd>
+            {{ ad.price }}
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            {{ ad.description }}
+        </dd>
+
+        <dt>
+            Full Size Image
+        </dt>
+
+        <dd>
+            {% if ad.imageURL %}
+            <img src="{{ ad.imageURL  }}" />
+            {% endif %}
+        </dd>
+
+        <dt>
+            Posted Date
+        </dt>
+
+        <dd>
+            {{ ad.postedDate.strftime('%Y-%m-%d %H:%M') }}
+        </dd>
+
+        <dt>
+            Category
+        </dt>
+
+        <dd>
+            {{ ad.category }}
+        </dd>
+
+        <dt>
+            Phone
+        </dt>
+
+        <dd>
+            {{ ad.phone }}
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    <a href="{{ url_for("edit", id=ad.id) }}">Edit</a> |
+    <a href="{{ url_for("index") }}">Back to list</a>
+</p>
+
+{% endblock %}

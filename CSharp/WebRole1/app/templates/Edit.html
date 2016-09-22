@@ -1,0 +1,82 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ titile }}</h2>
+
+<div class="form-horizontal">
+    <h4>Ad</h4>
+    <hr />
+    <form action="{{ url_for("edit", id=ad.id) }}" method="post" enctype="multipart/form-data">
+        <input name="_csrf_token" type="hidden" value="{{ csrf_token }}" />
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="title">Title: </label>
+            <div class="col-md-10">
+                <input type="text" name="title" id="title" value="{{ ad.title }}" maxlength="100" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="price">Price: </label>
+            <div class="col-md-10">
+                <input type="number" name="price" id="price" value="{{ ad.price }}" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="description">Description: </label>
+            <div class="col-md-10">
+                <textarea name="description" id="description" cols="40" rows="4" maxlength="1000" required>{{ ad.description }}</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Thumbnail of current image:</label>
+            <div class="col-md-10">
+                {% if ad.thumbnailURL %}
+                    <img src="{{ ad.thumbnailURL }}" />
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="imageFile">New image: </label>
+            <div class="col-md-10">
+                <input type="file" name="imageFile" id="imageFile" class="form-control fileupload" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="category">Category: </label>
+            <div class="col-md-10">
+                <div class="col-md-10">
+                    <select name="category" id="category">
+                        {% for cat in categoryList %}
+                        <option value="{{ cat }}" {% if cat == ad.category %} selected="selected" {% endif %}>{{ cat }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="phone">Phone: </label>
+            <div class="col-md-10">
+                <input type="text" name="phone" id="phone" value="{{ ad.phone }}" maxlength="12" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<div>
+    <a href="{{ url_for("index") }}">Back to list</a>
+</div>
+
+{% endblock %}

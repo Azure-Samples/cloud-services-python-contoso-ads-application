@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WebRole1", "WebRole1\WebRole1.pyproj", "{AE780C73-E036-4CD3-94D4-82CCF41ED1CF}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WorkerRole1", "WorkerRole1\WorkerRole1.pyproj", "{423F5FFD-3794-4E51-AAE4-580F29B972C1}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "FlaskCloudService", "FlaskCloudService\FlaskCloudService.ccproj", "{FFC4F184-682C-467B-8C37-990FDF1831E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE780C73-E036-4CD3-94D4-82CCF41ED1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE780C73-E036-4CD3-94D4-82CCF41ED1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE780C73-E036-4CD3-94D4-82CCF41ED1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE780C73-E036-4CD3-94D4-82CCF41ED1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423F5FFD-3794-4E51-AAE4-580F29B972C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423F5FFD-3794-4E51-AAE4-580F29B972C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423F5FFD-3794-4E51-AAE4-580F29B972C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423F5FFD-3794-4E51-AAE4-580F29B972C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC4F184-682C-467B-8C37-990FDF1831E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC4F184-682C-467B-8C37-990FDF1831E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC4F184-682C-467B-8C37-990FDF1831E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC4F184-682C-467B-8C37-990FDF1831E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
