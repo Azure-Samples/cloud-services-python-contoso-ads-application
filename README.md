@@ -12,7 +12,7 @@ author: msonecode
 
 ***1. [Python 3.4 interpreter for Windows](https://www.python.org/downloads/release/python-344/).***
 
-Note that only Python 3.4 and 2.7 are natively supported by Azure (Python 3.4 by default). If you'd like to use 2.7 or other versions, additional configuration for start up task is required.
+Note that only Python 3.4 and 2.7 are natively supported by Azure (Python 3.4 by default). If you prefer 2.7 or other versions, additional configuration for startup task is required.
 
 ***2. Visual Studio 2013 or 2015***
 
