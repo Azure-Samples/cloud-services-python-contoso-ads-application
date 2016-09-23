@@ -4,7 +4,9 @@ platforms: python
 author: msonecode
 ---
 
-# Introduction
+# Python Contoso Ads Application Cloud Service 
+
+## Introduction
 
 [Flask (Micro-framework for Python)](http://flask.pocoo.org/) version of the Contoso Ads application in [Get started with Azure Cloud Services and ASP.NET](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-dotnet-get-started/).
 
