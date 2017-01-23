@@ -12,35 +12,35 @@ author: msonecode
 
 ## Prerequisites
 
-***1. [Python 3.4 interpreter for Windows](https://www.python.org/downloads/release/python-344/).***
+### 1. [Python 3.4 interpreter for Windows](https://www.python.org/downloads/release/python-344/).
 
 Note that only Python 3.4 and 2.7 are natively supported by Azure (Python 3.4 by default). If you prefer 2.7 or other versions, additional configuration for startup task is required.
 
-***2. Visual Studio 2013 or 2015***
+### 2. Visual Studio 2013 or 2015
 
-***3. [Python Tools for Visual Studio (PTVS)](https://www.visualstudio.com/vs/python/)***
+### 3. [Python Tools for Visual Studio (PTVS)](https://www.visualstudio.com/vs/python/)
 
-***4. [Azure SDK Tools for VS 2013](http://go.microsoft.com/fwlink/?LinkId=323510) or [Azure SDK Tools for VS 2015](http://go.microsoft.com/fwlink/?LinkId=518003)***
+### 4. [Azure SDK Tools for VS 2013](http://go.microsoft.com/fwlink/?LinkId=323510) or [Azure SDK Tools for VS 2015](http://go.microsoft.com/fwlink/?LinkId=518003)
 
-***5. Azure Storage Account***
+### 5. Azure Storage Account 
 
 Follow [this guide](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/) to create a storage account and obtain the Access Key.
 
-***6. Azure Service Bus***
+### 6. Azure Service Bus
 
 Follow [this guide](https://azure.microsoft.com/en-us/documentation/articles/service-bus-python-how-to-use-queues/#create-a-service-namespace) to create a service bus and obtain the SAS key.
 
-***7. MongoDB***
+### 7. MongoDB 
 
 You may use [MongoDB on Azure Virtual Machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-classic-install-mongodb/) or [mLab](https://mlab.com/azure/).
 
 ## Run the sample
 
-***1\. Reload the project if it shows “unavailable”.***
+### 1\. Right click the project in the solution explorer and then choose Reload Project if it shows “unavailable”. 
 
 ![1](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/1.png)
 
-***2\. Modify the connection settings in WebRole1 > app > config.py.***
+### 2\. Modify the connection settings in WebRole1 > app > config.py. 
 
 MONGODB\_SETTINGS ={  
    'db': '*your database name*',  
@@ -57,7 +57,7 @@ SERVICEBUS\_NAMESPACE = '*your servicebus namespace*'
 SERVICEBUS\_ACCESS_KEYNAME = '*access key name*'  
 SERVICEBUS\_ACCESS_KEYVALUE = '*access key value*'  
 
-***3\. Modify the connection settings in WorkerRole1 > config.py.***
+### 3\. Modify the connection settings in WorkerRole1 > config.py. 
 
 STORAGE\_ACCOUNT\_NAME = '*storage account name*'  
 STORAGE\_ACCOUNT\_KEY = '*storage access key*'  
@@ -72,35 +72,35 @@ MONGODB\_PORT =  *port number*
 MONGODB\_USERNAME = '*your user name*'  
 MONGODB\_PASSWORD = '*your password*'  
 
-***4\. Remove the old virtual environment setting in WebRole1.***
+### 4\. Right click the Python Environments section under the solution, remove the old virtual environment setting in WebRole1. 
 
 ![4](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/2.png)
 
-***5\. Add a new virtual environment in WebRole1.***
+### 5\. Add a new virtual environment in WebRole1. 
 
 ![5](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/3.png)
 
-***6\. Uncheck “Download and install packages” because we need to add some wheel files to local disk.***
+### 6\. Uncheck “Download and install packages” because we need to add some wheel files to local disk. 
 
 ![6](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/4.png)
 
-***7\. Repeat step 2 - 6 for WorkerRole1.***
+### 7\. Repeat step 2 - 6 for WorkerRole1. 
 
-***8\. Find the .whl files in bin folder under WorkerRole1.***
+### 8\. Find the .whl files in bin folder under WorkerRole1. 
 
 ![8](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/7.png)
 
-***9\. Create a bin folder in WorkerRole1 env folder and copy the .whl files to bin.***
+### 9\. Create a bin folder in WorkerRole1 env folder and copy the .whl files to bin.
 
 ![9](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/8.png)
 
-***10\. Repeat step 8 - 9 for WebRole1.***
+### 10\. Repeat step 8 - 9 for WebRole1. 
 
-***11\. Run Install from requirements.txt for both virtual env.***
+### 11\. Run Install from requirements.txt for both virtual env. 
 
 ![11](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/9.png)
 
-***12\. To debug a particular role, right click on the role name and click "Set as StartUp Project".***
+### 12\. To debug a particular role, right click on the role name and click "Set as StartUp Project". 
 
 ![12](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/10.png)
 
