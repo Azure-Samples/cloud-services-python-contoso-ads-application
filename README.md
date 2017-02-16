@@ -29,7 +29,6 @@ Follow [this guide](https://azure.microsoft.com/en-us/documentation/articles/sto
 ### 6. Azure Service Bus
 
 Follow [this guide](https://azure.microsoft.com/en-us/documentation/articles/service-bus-python-how-to-use-queues/#create-a-service-namespace) to create a service bus and obtain the SAS key.
-
 ### 7. MongoDB 
 
 You may use [MongoDB on Azure Virtual Machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-classic-install-mongodb/) or [mLab](https://mlab.com/azure/).
@@ -39,7 +38,7 @@ You may use [MongoDB on Azure Virtual Machine](https://azure.microsoft.com/en-us
 ### 1\. Right click the project in the solution explorer and then choose Reload Project if it shows “unavailable”. 
 
 ![1](https://raw.githubusercontent.com/shaqian/Flask-Azure-Cloud-Service/master/1.png)
-
+a
 ### 2\. Modify the connection settings in WebRole1 > app > config.py. 
 
 MONGODB\_SETTINGS ={  
@@ -110,6 +109,6 @@ You may follow [this guide](https://azure.microsoft.com/en-us/documentation/arti
 
 ## Additional Information
 
-1\. We use [wheels](http://pythonwheels.com/) to install cffi, cryptograpy and Pillow library, because  in Python 3.4 normal pip install for these libraries may fail and return error **"Unable to find vcvarsall.bat"**. If your can successfully install all references just by defining the name in requirements, you may safely skip above step 8 - 10.
+1\. We use [wheels](http://pythonwheels.com/) to install cffi, cryptograpy and Pillow library, because  in Python 3.4 normal pip installation for these libraries may fail and return error **"Unable to find vcvarsall.bat"**. If you can successfully install all references just by defining the name in requirements, you may safely skip above step 8 - 10.
 
 2\. Startup and Runtime task logs are located in the **C:\Resources\Directory{role}\LogFiles** folder in the Cloud Service instance. Check **ConfigureCloudService.txt** if any library in requirements.txt is not successfully installed. Check **LaunchWorker.err.txt** for WorkerRole runtime errors.
